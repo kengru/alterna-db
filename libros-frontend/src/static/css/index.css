@@ -1,0 +1,31 @@
+html {
+  height: 100%;
+
+  font-family: monospace;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  letter-spacing: 1px;
+}
+
+main {
+  ul {
+    padding: 0;
+    li {
+      list-style: none;
+    }
+  }
+}
+
+footer {
+  height: 3em;
+}
