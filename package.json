@@ -1,0 +1,23 @@
+{
+  "name": "alterna-db",
+  "version": "0.0.1",
+  "description": "Proyecto de Alterna para demostrar conexion a base de datos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kengru/alterna-db.git"
+  },
+  "author": "kengrullon@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kengru/alterna-db/issues"
+  },
+  "homepage": "https://github.com/kengru/alterna-db#readme",
+  "dependencies": {
+    "@prisma/client": "^5.20.0",
+    "express": "^4.21.0"
+  }
+}
