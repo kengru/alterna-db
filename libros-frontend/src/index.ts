@@ -12,6 +12,10 @@ app.get("/libros/:id", (_, res) => {
   res.sendFile(path.join(__dirname, "views", "libro.html"));
 });
 
+app.get("/autores/:id", (_, res) => {
+  res.sendFile(path.join(__dirname, "views", "autor.html"));
+});
+
 app.use(express.static(path.join(__dirname, "static")));
 
 app.listen(PORT, () => {

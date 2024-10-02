@@ -33,15 +33,18 @@ app.get("/autores", async (req, res) => {
   res.json(autor);
 });
 
-app.get("/autores/libros/:id", async (req, res) => {
+app.get("/autores/:id", async (req, res) => {
   const { id }: { id?: string } = req.params;
 
-  const libros = await prisma.libro.findMany({
+  const autor = await prisma.autor.findFirst({
     where: {
-      autorId: Number(id),
+      id: Number(id),
+    },
+    include: {
+      libros: true,
     },
   });
-  res.json(libros);
+  res.json(autor);
 });
 
 app.get("/categorias", async (req, res) => {
