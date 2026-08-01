@@ -20,8 +20,9 @@ model Libro {
 }
 
 model Autor {
-  id     Int    @id @default(autoincrement())
-  nombre String
+  id               Int       @id @default(autoincrement())
+  nombre           String
+  fecha_nacimiento DateTime?
 
   libros Libro[]
 }

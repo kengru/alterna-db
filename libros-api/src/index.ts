@@ -10,7 +10,12 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/libros", async (req, res) => {
-  const libros = await prisma.libro.findMany();
+  const libros = await prisma.libro.findMany({
+    include: {
+      autor: true,
+    },
+  });
+
   res.json(libros);
 });
 
